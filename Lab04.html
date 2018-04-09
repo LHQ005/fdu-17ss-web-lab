@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+   <meta charset="utf-8">
+   <title>Lab 04</title>
+   <link rel="stylesheet" href="./css/reset.css" />
+   <link rel="stylesheet" href="./css/Lab04.css" />
+</head>
+<body>
+<header>
+     <h1>Share Your Travels</h1>
+     <p>let us know where you've been</p>
+</header>
+<main>
+   <section>
+       <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+           <fieldset>
+               <legend>PHOTO DETAILS</legend>
+               <table>
+                   <tbody>
+                   <tr>
+                       <td colspan="2">
+                           <label for="title">Title</label><br>
+                           <input type="text" name="title" value="Give your photo a descriptive name" id="title"><br>
+                           <label for="Description">Description</label><br>
+                           <textarea id="Description"  rows="5">Adding a rich description will help with search results</textarea><br>
+                       </td>
+
+                   </tr>
+                   <tr>
+                       <td>
+                           <label for="Continent">Continent</label><br>
+                           <select id="Continent">
+                               <option>Choose continent</option>
+                               <option>Choose</option>
+                           </select><br>
+                           <label for="Country">Country</label><br>
+                           <select id="Country">
+                               <option>Choose country</option>
+                               <option>Choose</option>
+                           </select><br>
+                           <label for="City">City</label><br>
+                           <input type="text" id="City" name="city">
+
+                       </td>
+                       <td>
+                           <p class="box">
+                               Copyright?<br>
+                                <input type="radio" name="box" value="All rights reserved" >All rights reserved<br>
+                                <input type="radio" name="box" value="Creative Commons">Creative Commons<br>
+                           </p>
+                           <p class="box">
+                               Creative Commons types<br>
+                               <input type="checkbox" name="box" value="Attribution">Attribution<br>
+                               <input type="checkbox" name="box" value="Noncommercial">Noncommercial<br>
+                               <input type="checkbox" name="box" value="No Derivative Works ">No Derivative Works
+                           </p>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td colspan="2">
+                           <p class="rectangle ">
+                           I accept the software license  <input type="checkbox" name="box" value="Attribution">
+                           </p>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                           <label for="rate">Rate this photo</label><br>
+                           <input type="number" id="rate"><br>
+                           <label for="color">Color Collection</label><br>
+                           <input type="color" id="color">
+
+                       </td>
+                       <td>
+                           <p class="box">
+                           <label for="date">Date Taken</label><br>
+                           <input type="date" id="date" ><br>
+                           <label for="time">Time Taken</label><br>
+                               <input type="time" id="time" >
+                           </p>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td colspan="2">
+                           <p class="rectangle">
+                               <input type="submit"  class="rounded"   name="提交" value="提交" >
+                               <input type="reset"  class="rounded"   name="提交" value="Clear Form" >
+                           </p>
+                       </td>
+                   </tr>
+                   </tbody>
+               </table>
+           </fieldset>
+       </form>
+   </section>
+</main>  
+</body>
+</html>
