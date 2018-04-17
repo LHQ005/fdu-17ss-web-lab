@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 05b</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body class="container">
+<div class="row justify-content-around">
+<header class="text-center col-sm-4">
+            <h1>Share Your Travels</h1>
+            <p><i>let us know where you've been</i></p>
+</header>
+<nav class=" col-sm-8 navbar navbar-expand-sm navbar-light align-self-center  ">
+    <ul class="navbar-nav w-75 justify-content-around text-center ">
+        <li class="nav-item active"> <a class="nav-item nav-link" href="lab05a.html">Gallery</a></li>
+        <li class="nav-item"> <a class="nav-item nav-link" href="#">Related Photos</a></li>
+        <li class="nav-item"> <a class="nav-item nav-link" href="#">Reviews</a></li>
+    </ul>
+</nav>
+</div>
+<main class="border  p-3">
+    <section>
+        <form   role="form"  method="post" action="http://www.randyconnolly.com/tests/process.php">
+            <fieldset class="form-group">
+                <legend>Photo Details</legend>
+                <table class="w-100">
+                    <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <label for="title">Title</label><br>
+                            <input type="text" class="form-control"  name="title" value="Give your photo a descriptive name" id="title"><br>
+                            <label for="Description">Description</label><br>
+                            <textarea id="Description" class="form-control"   rows="3">Adding a rich description will help with search results</textarea><br>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Continent">Continent</label><br>
+                            <select id="Continent" class="form-control  bg-light" >
+                                <option>Choose</option>
+                                <option>Choose continent</option>
+                                <option>Choose</option>
+                            </select><br>
+                            <label for="Country">Country</label><br>
+                            <select id="Country"  class="form-control  bg-light" >
+                                <option>Choose country</option>
+                                <option>Choose</option>
+                            </select><br>
+                            <label for="City">City</label><br>
+                            <input type="text" id="City"   class="form-control" name="city"><br>
+
+                            <p class="box">
+                                Copyright?<br>
+                                <input type="radio" name="box" value="All rights reserved" >All rights reserved<br>
+                                <input type="radio" name="box" value="Creative Commons">Creative Commons<br>
+                            </p>
+                            <p>
+                                Creative Commons types
+                                <div class="row">
+                            <div class="col-sm-3">
+                                <input type="checkbox" name="box" value="Attribution">Attribution<br>
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="checkbox"  name="box" value="Noncommercial">Noncommercial<br>
+                            </div>
+                                <div class="col-sm-3">
+                                <input type="checkbox"  name="box" value="No Derivative Works ">No Derivative Works
+                                </div>
+                            </div>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p>
+                            <input type="checkbox" name="box" value="Attribution">  I accept the software license
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row justify-content-between">
+                        <td class="col-sm-3">
+                            <label for="rate">Rate this photo</label><br>
+                            <input type="number" id="rate"><br> </td>
+                            <td class="col-sm-7">
+                            <label for="color">Color Collection</label><br>
+                            <input type="text" class="form-control"  id="color">
+                            </td>
+
+                       </tr>
+                        <tr class="row row justify-content-between">
+                            <td class="col-sm-6">
+
+                                <label for="date">Date Taken</label><br>
+                                <input type="text" class="form-control"  id="date" ><br>
+                            </td>
+                            <td class="col-sm-4">
+                                <label for="time">Time Taken</label><br>
+                                <input type="text" class="form-control"  id="time" >
+                            </td>
+                        </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <p class="rectangle">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <input type="submit"  class="rounded btn btn-secondary" name="提交" value="submit" >
+                                <input type="reset"  class="rounded btn btn-secondary"   name="提交" value="Clear Form">
+                        </div>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </section>
+</main>
+</body>
+</html>
