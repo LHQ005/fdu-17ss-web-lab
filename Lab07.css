@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+}
+.input{
+    width: 330px;
+}
+.create1{
+    margin: 5px;
+
+}
+#div3,#div4{
+    color:black;
+    margin-top: 0.5em;
+
+}
+.thClass{
+    background-color: grey;
+    color: whitesmoke;
+}
+ tr:nth-child(odd){
+    background-color: lightgrey;
+    padding:  0 0.5em;
+}
+/*.td{*/
+    /*padding:  0 0.5em;*/
+/*}*/

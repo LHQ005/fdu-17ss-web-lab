@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Lab07</title>
+    <link href="Lab07.css" rel="stylesheet">
+    <link href="reset.css">
+
 </head>
 <body>
-$END$
+        <select  class="input" id="select" onchange="donSelect2()" >
+            <option id="selectOne" value="0" >SELECT ONE</option>
+            <option id="create" value="1" >CREATE TABLE</option>
+            <option id="add" value="2">ADD ROW</option>
+            <option id="deleteRow" value="3">DELETE ROW</option>
+            <option id="deleteTable" value="4">DELETE TABLE</option>
+        </select><br>
+
+        <div id="div">
+        </div>
+        <div id="div1">
+        </div>
+        <div id="div2">
+        </div>
+        <select  class="input" id="select2" onchange="donSelect2()">
+            <option id="selectDefault">SELECT (default:lastcreated) </option>
+        </select>
+        <div id="div3"align="center" >
+        </div>
+        <div id="div4"align="center"></div>
+        <script src="Lab07.js"></script>
 </body>
 </html>
