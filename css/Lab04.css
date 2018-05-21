@@ -96,9 +96,13 @@ input[type=number],
 input[type=color] {
   height: 1.75em;
 }
+<<<<<<< HEAD
 input[type=number]{
   width: 4em;
 }
+=======
+
+>>>>>>> upstream/master
 select {
   height: 2em;
 }
