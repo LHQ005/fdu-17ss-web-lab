@@ -1,11 +1,5 @@
-<?php
-include 'travel-data.inc.php';
-
-
-
-
-?>
-
+<?php include 'travel-data.inc.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,8 +35,14 @@ include 'travel-data.inc.php';
               /* you will need to fill this place with appropriate PHP */
               /* hint: use array and loop */
               //the next line is an example
-              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a> 
+              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a>
 
+              echo "<a href=\"list.php?country=Canada\" role=\"button\" class=\"btn btn-default\"> Canada</a>";
+              echo"<a href=\"list.php?country=Germany\" role=\"button\" class=\"btn btn-default\"> Germany</a>";
+              echo"<a href=\"list.php?country=Greece\" role=\"button\" class=\"btn btn-default\"> Greece</a>";
+              echo"<a href=\"list.php?country=Italy\" role=\"button\" class=\"btn btn-default\"> Italy</a>";
+              echo"<a href=\"list.php?country=United Kingdom\" role=\"button\" class=\"btn btn-default\"> United Kingdom</a>";
+              echo"<a href=\"list.php?country=United States\" role=\"button\" class=\"btn btn-default\"> United States</a>";
 
               ?>
                      
@@ -52,25 +52,32 @@ include 'travel-data.inc.php';
 
 		<ul class="caption-style-2">
          
-          <?php   
-          /* you will need to fill this place with appropriate PHP */ 
-          /* hint: use array and loop */
-          //the next lines are one of the elements
-          //you need to fill the elements with data provided
-
-
-   //        <li>
-   //              <a href="detail.php?id=22" class="img-responsive">
-   //              	<img src="images/square/6114850721.jpg" alt="View of Cologne">
-   //              	<div class="caption">
-   //              		<div class="blur">
-   //              		</div>
-   //              		<div class="caption-text">
-   //              			<h1>View of Cologne</h1>
-   //              		</div>
-   //              	</div>
-   //              </a>
-			// </li>
+          <?php
+          include("travel-data.inc.php");
+	   function image($num){
+	       global $images;
+        $picture = "<li>"."<a href=\"detail.php?id=" .$images[$num]["id"]."\" class=\"img-responsive\">".
+                        "<img src=\"images/square/"  .$images[$num]["path"].  "\" alt=\"View of Cologne\">".
+                        "<div class=\"caption\">"."<div class=\"blur\"></div><div class=\"caption-text\"><h1>"
+                        .$images[$num]["title"]. "</h1></div></div></a></li>";
+                    echo $picture;
+    }
+          image(22);
+          image(54);
+          image(7);
+          image(19);
+          image(46);
+          image(6);
+          image(60);
+          image(58);
+          image(75);
+          image(77);
+          image(27);
+          image(2);
+          image(24);
+          image(13);
+          image(101);
+          image(102);
           ?>
 
        </ul>       
