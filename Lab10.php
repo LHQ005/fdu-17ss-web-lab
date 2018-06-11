@@ -3,7 +3,10 @@
 
 //****** Hint ******
 //connect database and fetch data here
-
+$dB = new mysqli("localhost","root","","travel");
+$sql1 = "SELECT* FROM  Continents";
+$sql2 = "SELECT* FROM Countries";
+$sql3 = "SELECT* FROM ImageDetails";
 
 ?>
 
@@ -46,6 +49,7 @@
 
                 //****** Hint ******
                 //display the list of continents
+                $result = $dB->query($sql1);
 
                 while($row = $result->fetch_assoc()) {
                   echo '<option value=' . $row['ContinentCode'] . '>' . $row['ContinentName'] . '</option>';
@@ -60,7 +64,13 @@
                 //Fill this place
 
                 //****** Hint ******
-                /* display list of countries */ 
+                /* display list of countries */
+
+                $result1 = $dB->query($sql2);
+                 while($row1 = $result1->fetch_assoc()) {
+                    echo '<option value=' . $row1['ISO'] . '>' . $row1['CountryName'] . '</option>';
+                }
+
                 ?>
               </select>    
               <input type="text"  placeholder="Search title" class="form-control" name=title>
@@ -73,7 +83,37 @@
                                     
 
 		<ul class="caption-style-2">
-            <?php 
+            <?php
+
+            $result2 = $dB->query($sql3);
+            while($row = $result2->fetch_assoc()) {
+                $div="<li>";
+            $div.="<a href='detail.php?id=".$row['ImageID']."' class='img-responsive'>";
+            $div.="<img src='images/square-medium/".$row['Path']."'/>";
+            $div.="<div class='caption'>";
+            $div.="<div class='blur'>";
+            $div.="</div>";
+            $div.="<div class='caption-text'>";
+            $div.="<h1>";
+            $div.=$row['Title'];
+            $div.="</h1>";
+            $div.="</div>";
+            $div.="</div>";
+            $div.="</a>";
+            $div.="</li>";
+
+            if(count($_GET)<2){
+                echo $div;
+
+            }
+            else{
+                if((($_GET['continent']==$row['ContinentCode'])||($_GET['continent']=='0'))&&(($_GET['country']==$row['CountryCodeISO'])||($_GET['country']=='0'))){
+                    echo $div;}
+            }
+
+            }
+
+
             //Fill this place
 
             //****** Hint ******
@@ -88,8 +128,8 @@
                   </div>
                 </div>
               </a>
-            </li>        
-            */ 
+            </li>
+            */
             ?>
        </ul>       
 
